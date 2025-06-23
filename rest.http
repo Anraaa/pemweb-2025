@@ -1,0 +1,51 @@
+@baseUrl = https://pemweb.test/api/tests/
+@cType = application/json
+
+### GET all
+GET {{baseUrl}}
+Content-Type: {{cType}}
+
+### GET by IDS
+GET {{baseUrl}}1
+Content-Type: {{cType}}
+
+### POST create
+POST {{baseUrl}}
+Content-Type: {{cType}}
+Accept: {{cType}}
+
+{
+  "name": "Test 2",
+  "description": "Test Description"
+}
+
+### GET 2
+GET {{baseUrl}}2
+Content-Type: {{cType}}
+
+### PUT update 2
+PUT {{baseUrl}}2
+Content-Type: {{cType}}
+Accept: {{cType}}
+
+{
+  "name": "Test 2 Updated",
+  "description": "Updated Test Description"
+}
+
+### GET 2 after update
+GET {{baseUrl}}2
+Content-Type: {{cType}}
+
+### DELETE 2
+DELETE {{baseUrl}}2
+Content-Type: {{cType}}
+Accept: {{cType}}
+
+### GET 2 after delete
+GET {{baseUrl}}2
+Content-Type: {{cType}}
+
+### GET all after delete
+GET {{baseUrl}}
+Content-Type: {{cType}}
